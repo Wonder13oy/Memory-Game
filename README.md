@@ -54,8 +54,7 @@ HOW TO OPEN
 2. It will open with your default web browser.
 3. **It might not open on Internet Explorer.**
 
-**THIS IS BOLDED**
-
-*THIS IS ITALIC*
-
 ---
+
+  ENJOY THE GAME!!!
+  ===
