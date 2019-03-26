@@ -30,6 +30,7 @@ function flipCard() {
   if (count === 0)
   {
     alert("YOU DID IT! NICE GAME!");
+    location.reload();
   }
 }
 
