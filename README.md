@@ -26,6 +26,7 @@ AUTHOR & CONTRIBUTOR LIST
 ---
 
 * Wandile Nxumalo (Lead Developer)
+* Claude Mashinini (github.com/TheBlaqHulk)
 * freeCodeCamp.org
 
 ---
