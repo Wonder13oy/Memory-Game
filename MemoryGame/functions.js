@@ -1,6 +1,9 @@
 const cards = document.querySelectorAll('.cards');
 
-let hasFlippedCard = false, lockBoard, firstCard, secCard, count = 20;
+let hasFlippedCard = false, lockBoard, firstCard, secCard, countDown = 0;
+
+var userInput = prompt("Please enter an even number between 4 and 20");
+countDown = userInput;
 
 function flipCard() {
 	if (lockBoard || this === firstCard) return;
@@ -22,7 +25,7 @@ function flipCard() {
 	checkMatch();
 
 	//Telling the user that they have completed the game
-	if (count === 0)
+	if (countDown === 0)
 	{
 		alert("YOU DID IT! NICE GAME!");
 		location.reload();
@@ -48,7 +51,7 @@ function checkMatch() {
 	if (firstCard.dataset.framework === secCard.dataset.framework) {
 		//it's a match!!
 		disableCards();
-		count-= 2;
+		countDown-= 2;
 	} else {
 		//not a match
 		unFlipCards();
@@ -70,6 +73,9 @@ function resetBoard () {
 
 //To randomise the positions of the cards on the board  --> Learnt this syntax on ES6(Call right after creating function)
 (function shuffle() {
+ userInput = userInput >= 4 && userInput <= 20 && userInput % 2 === 0 ? userInput : 4;
+ for (var k = 0; k < cards.length - userInput; k++)
+ cards[k].style.display = "none";
  cards.forEach(card => {
 		 let randomPos = Math.floor(Math.random() * 20);
 		 card.style.order = randomPos;
