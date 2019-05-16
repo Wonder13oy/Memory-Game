@@ -7,12 +7,12 @@ countDown = userInput;
 
 function flipCard() {
 	if (lockBoard || this === firstCard) return;
-	if(this === firstCard) return;
+	if (this === firstCard) return;
 
 	this.classList.toggle('flip');
 
 	//Stops the user from flipping the same card twice
-	if(!hasFlippedCard) {
+	if (!hasFlippedCard) {
 		// first click
 		hasFlippedCard = true, firstCard = this;
 
@@ -25,8 +25,7 @@ function flipCard() {
 	checkMatch();
 
 	//Telling the user that they have completed the game
-	if (countDown === 0)
-	{
+	if (countDown === 0) {
 		alert("YOU DID IT! NICE GAME!");
 		location.reload();
 	}
@@ -51,7 +50,7 @@ function checkMatch() {
 	if (firstCard.dataset.framework === secCard.dataset.framework) {
 		//it's a match!!
 		disableCards();
-		countDown-= 2;
+		countDown -= 2;
 	} else {
 		//not a match
 		unFlipCards();
@@ -67,19 +66,19 @@ function disableCards() {
 }
 
 //To make sure that not more than 2 cards are chosen
-function resetBoard () {
+function resetBoard() {
 	[hasFlippedCard, lockBoard, firstCard, secCard] = [false, false, null, null];
 }
 
-//To randomise the positions of the cards on the board  --> Learnt this syntax on ES6(Call right after creating function)
+//To randomise the positions of the cards on the board
 (function shuffle() {
- userInput = userInput >= 4 && userInput <= 20 && userInput % 2 === 0 ? userInput : 4;
- for (var k = 0; k < cards.length - userInput; k++)
- cards[k].style.display = "none";
- cards.forEach(card => {
-		 let randomPos = Math.floor(Math.random() * 20);
-		 card.style.order = randomPos;
-		 });
- })();
+	userInput = userInput >= 4 && userInput <= 20 && userInput % 2 === 0 ? userInput : 4;
+	for (var k = 0; k < cards.length - userInput; k++)
+		cards[k].style.display = "none";
+	cards.forEach(card => {
+		let randomPos = Math.floor(Math.random() * 20);
+		card.style.order = randomPos;
+	});
+})();
 
 cards.forEach(card => card.addEventListener('click', flipCard));
