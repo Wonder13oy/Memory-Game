@@ -26,7 +26,7 @@ AUTHOR & CONTRIBUTOR LIST
 ---
 
 * Wandile Nxumalo (Lead Developer)
-* Claude Mashinini (github.com/TheBlaqHulk)
+* Claude Mashinini (https://github.com/TheBlaqHulk)
 
 ---
 
