@@ -26,7 +26,7 @@ AUTHOR & CONTRIBUTOR LIST
 ---
 
 * Wandile Nxumalo (Lead Developer)
-* Claude Mashinini (`github.com/TheBlaqHulk`)
+* Claude Mashinini (github.com/TheBlaqHulk)
 
 ---
 
@@ -50,9 +50,14 @@ README.md
 
 HOW TO OPEN
 ---
-1. Click on the `index.html` file.
-2. It will open with your default web browser.
-3. **It might not open on Internet Explorer.**
+Open Terminal and type:
+
+1. `npm clone https://github.com/Wonder13oy/Memory-Game.git` --> Clone it to your local storage
+2. `cd Memory-Game` --> To go into the directory
+3. `npm install` --> Installs all dependencies
+4. `npm start` --> To start the program
+
+**N.B: It might not open on Internet Explorer.**
 
 ---
 
